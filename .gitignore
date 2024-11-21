@@ -1,4 +1,35 @@
 # Ignorar la carpeta node_modules
 node_modules/
 
+# Ignorar archivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
+# Ignorar configuraciones del entorno local
+.env
+
+# Ignorar configuraciones del editor/IDE
+.idea/
+.vscode/
+*.swp
+
+# Ignorar archivos de cache de sistemas
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas de salida o compilación
+/build/
+dist/
+tmp/
+out/
+
+# Ignorar archivos de pruebas temporales
+*.local
+*.test
+*.spec
+
+# Ignorar archivos de instalación de paquetes (opcional si trabajas con lock files)
+package-lock.json
+yarn.lock
