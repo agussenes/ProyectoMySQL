@@ -1,0 +1,262 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: grid;
+    align-content: end;
+    min-height: 0;
+
+}
+
+/* Navbar Styles */
+#linkAccion {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* Section 1 - Quienes Somos */
+section1 {
+    background-color: #f1d28f;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    padding-right: 150px;
+    padding-left: 150px;
+}
+
+.containerBio {
+    background-color: #fde4af;
+    padding: 0px 100px;
+    height: auto;
+    margin-bottom: 2rem;
+    border-radius: 0.6rem;
+}
+
+.containerBio h2 {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #13373b;
+}
+
+.containerBio ul {
+    padding: 20px;
+    margin: 10px;
+}
+
+.containerBio ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.containerBio ul li strong {
+    font-weight: bold;
+    color: #30646B;
+}
+
+.bton {
+    border-radius: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #fff;
+    background-color: #e4572e;
+    border: 1px solid #fff;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.bton:hover {
+    color: #e4572e;
+    background-color: #fff;
+    font-weight: 600;
+    transform: translateY(-5px);
+}
+
+.containerButtonQS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section 2 - Acción */
+.containerAccion {
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    height: auto;
+    background-image: url('../images/paralax/paralxCururu.webp');
+    background-attachment: fixed;
+}
+
+.accion {
+    background-color: #30646b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accion img {
+    max-width: 200px;
+    padding-top: 1rem;
+}
+
+.accion h3 {
+    font-size: 27px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.accion:hover {
+    box-shadow: 0px 4px 16px #fde4af;
+    transform: translateY(-5px);
+}
+
+.accion h3:hover {
+    color: #fde4af;
+}
+
+/* Section 3 - Productos Destacados */
+.contenedorGeneral {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #fde4af;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.contenedorGeneral h2 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+    color: #13373B;
+
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.producto {
+    background: #30646b;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.producto h3 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.producto p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    /* Added space between text and button */
+}
+
+.botonProducto {
+    padding: 0.5rem 1rem;
+    background-color: #e4572e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.botonProducto:hover {
+    transform: translateY(-5px);
+    background-color: white;
+    color: #e4572e;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background-color: #497d56;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+footer .container .sec h2 {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+footer .container .sec h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #fde4af;
+}
+
+footer .container .sec p {
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+    section1 {
+        grid-template-columns: 1fr;
+        padding: 50px;
+    }
+
+    .containerAccion {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    footer .container {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedorGeneral {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}

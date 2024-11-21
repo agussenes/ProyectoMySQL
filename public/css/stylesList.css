@@ -1,0 +1,174 @@
+/* General Styles */
+.body-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #FDE4AF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: #F1D28F;
+}
+
+.body-title {
+    text-align: center;
+    color: #497D56;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contenedorBotonCrear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.body-create-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e4572e;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+    margin-bottom: 2rem;
+}
+
+.body-create-button:hover {
+    background-color: #497D56;
+    transform: translateY(-3px);
+}
+
+/* Product List Styles */
+.body-product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.body-producto {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.body-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.body-imagen img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.body-producto-title {
+    font-size: 1.5rem;
+    color: #497D56;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.body-producto-desc,
+.body-producto-price,
+.body-producto-category,
+.body-producto-user {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.body-producto-price strong,
+.body-producto-category strong,
+.body-producto-user strong {
+    color: #333;
+}
+
+/* Action Buttons */
+.body-acciones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.body-edit-button {
+    font-size: 1.2rem;
+    background: #497D56;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.body-edit-button:hover {
+    background: #e4572e;
+    transform: translateY(-3px);
+}
+
+.body-delete-button {
+    font-size: 1.2rem;
+    background: #e4572e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.body-delete-button:hover {
+    background: #497D56;
+    transform: translateY(-3px);
+}
+
+/* Back Link */
+a {
+    display: inline-block;
+
+    color: #e4572e;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+    text-align: center;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Añade transición */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra inicial */
+}
+
+a:hover {
+    color: #30646b;
+    transform: translateY(-5px);
+    /* Eleva el elemento */
+    text-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra más grande */
+}
+
+.body-back-link {
+    font-size: 1.5rem;
+}
+
+/* Responsive Styl */
+
+.hrList {
+    border: 2px solid #30646B;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}

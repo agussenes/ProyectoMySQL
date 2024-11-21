@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Juegos de Madera</title>
+    <link rel="stylesheet" href="css/stylesPartials.css">
+    <link rel="stylesheet" href="css/stylesList.css">
+    <script src="https://kit.fontawesome.com/961856c0dd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+
+        <div class="body-container">
+            <h1 class="body-title">Lista de Juegos de Madera</h1>
+            <div class="contenedorBotonCrear">
+                <a href="/productos/create" class="body-create-button">Crear Producto</a>
+            </div>
+            <div class="body-product-list">
+                <% productos.forEach(producto=> { %>
+                    <div class="body-producto">
+                        <div class="body-imagen">
+                            <img src="/images/<%= producto.imagen || 'placeholder.jpg' %>" alt="<%= producto.nombre %>">
+                        </div>
+                        <h2 class="body-producto-title">
+                            <%= producto.nombre %>
+                        </h2>
+                        <p class="body-producto-desc">
+                            <%= producto.descripcion %>
+                        </p>
+                        <p class="body-producto-price"><strong>Precio:</strong> $<%= producto.precio %>
+                        </p>
+                        <p class="body-producto-category"><strong>Categoria:</strong>
+                            <%= producto.Categoria ? producto.Categoria.nombre : 'Sin Categoría' %>
+                        </p>
+                        <div class="body-acciones">
+                            <a href="/productos/<%= producto.producto_id %>/edit" class="body-edit-button">Editar</a>
+                            <form action="/productos/<%= producto.producto_id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="body-delete-button">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+            <div class="contenedorBotonCrear">
+                <hr class="hrList">
+                <a href="/" class="body-back-link">Volver a Inicio</a>
+            </div>
+        </div>
+
+        <%- include('../partials/footer') %>
+
+        <script src="/js/scriptNavbar.js"></script>
+</body>
+
+</html>

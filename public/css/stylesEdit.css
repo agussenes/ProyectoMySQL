@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1d28f; /* Light background color for form */
+    color: #13373b;
+}
+
+/* Container for the Edit Product Page */
+.contenedorGeneralEdit {
+    max-width: 90%; /* Reduce overall width */
+    margin: 1rem auto;
+    margin-top: 8rem;
+    padding: 1.5rem;
+    background-color: #fde4af;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tituloEditarProducto {
+    font-size: 1.5rem; /* Smaller font size */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #13373b;
+}
+
+/* Form Styles */
+.formEditarProducto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Reduce gaps between form fields */
+}
+
+.campoForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.labelEditarProducto {
+    font-size: 0.9rem; /* Reduce label font size */
+    font-weight: bold;
+    color: #30646b;
+    margin-bottom: 0.3rem;
+}
+
+.inputEditarProducto,
+.textareaEditarProducto,
+.inputFileEditarProducto,
+.selectEditarProducto {
+    width: 100%;
+    padding: 0.6rem; /* Reduce padding */
+    font-size: 0.9rem; /* Smaller font size */
+    border: 2px solid #30646b;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputEditarProducto:focus,
+.textareaEditarProducto:focus,
+.inputFileEditarProducto:focus,
+.selectEditarProducto:focus {
+    border-color: #e4572e;
+    box-shadow: 0px 0px 5px rgba(228, 87, 46, 0.5);
+    outline: none;
+}
+
+.textareaEditarProducto {
+    resize: none;
+    height: 80px; /* Reduce height */
+}
+
+.imagenActual {
+    font-size: 0.8rem; /* Smaller font size */
+    color: #13373b;
+    margin: 0.3rem 0;
+}
+
+.imagenVista {
+    max-width: 100%;
+    height: 200px; /* Ensure responsive scaling */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.btnEditarProducto {
+    background-color: #e4572e;
+    color: #fff;
+    padding: 0.6rem 1.5rem; /* Reduce padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btnEditarProducto:hover {
+    background-color: #30646b;
+    transform: translateY(-3px);
+}
+
+.btnEditarProducto:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(228, 87, 46, 0.5);
+}
+
+/* Link Style */
+.linkVolverInicio {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #e4572e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem; /* Reduce font size */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.linkVolverInicio:hover {
+    color: #30646b;
+    transform: translateY(-3px); /* Smaller elevation */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contenedorGeneralEdit {
+        max-width: 95%;
+        padding: 1rem; /* Reduce padding */
+    }
+
+    .inputEditarProducto,
+    .textareaEditarProducto,
+    .selectEditarProducto {
+        font-size: 0.8rem; /* Adjust input size */
+    }
+
+    .btnEditarProducto {
+        font-size: 0.8rem; /* Adjust button size */
+        padding: 0.5rem 1rem; /* Reduce padding */
+    }
+
+    .tituloEditarProducto {
+        font-size: 1.3rem; /* Adjust title size */
+    }
+}

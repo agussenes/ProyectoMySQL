@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Juegos de Madera</title>
+    <link rel="stylesheet" href="/css/stylesPartials.css">
+    <link rel="stylesheet" href="/css/stylesCreate.css">
+    <script src="https://kit.fontawesome.com/961856c0dd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <div class="contenedorGeneralCreate">
+        <h1>Lista de Juegos de madera</h1>
+        <form action="/productos/create" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
+            <div>
+                <label for="descripcion">Descripcion: </label>
+                <textarea name="descripcion" id="descripcion" required></textarea>
+            </div>
+            <div>
+                <label for="precio">Precio: </label>
+                <input type="number" name="precio" id="precio" required>
+            </div>
+            <div>
+                <label for="imagen">Imagen: </label>
+                <input type="file" name="imagen" id="imagen">
+            </div>
+            <div>
+                <label for="categoria_id">Categoria:</label>
+                <select name="categoria_id" id="categoria_id">
+                    <% categorias.forEach(function(categoria) { %> <!-- Corrección aplicada -->
+                        <option value="<%= categoria.categoria_id %>"><%= categoria.nombre %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+
+    <a href="/">Volver a inicio</a>
+
+    <%- include('../partials/footer') %>
+
+    <script src="/js/scriptNavbar.js"></script>
+    
+</body>
+
+</html>

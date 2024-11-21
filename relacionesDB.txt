@@ -1,0 +1,12 @@
+Relación usuarios a productos (Uno a Muchos)
+
+Un usuario puede tener muchos productos, pero cada producto solo puede pertenecer a un usuario.
+Esto se establece mediante la columna usuario_id en la tabla productos, que es una clave foránea que hace referencia a id en la tabla usuarios.
+Relación categorias a productos (Uno a Muchos)
+
+Una categoría puede tener muchos productos, pero cada producto solo puede pertenecer a una categoría.
+Esto se establece mediante la columna categoria_id en la tabla productos, que es una clave foránea que hace referencia a categoria_id en la tabla categorias.
+Resumen
+La tabla productos tiene claves foráneas usuario_id y categoria_id, que establecen las relaciones adecuadas:
+FOREIGN KEY (usuario_id) REFERENCES usuarios(id) define la relación de uno a muchos entre usuarios y productos.
+FOREIGN KEY (categoria_id) REFERENCES categorias(categoria_id) define la relación de uno a muchos entre categorias y productos.
