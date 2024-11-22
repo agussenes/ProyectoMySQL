@@ -1,0 +1,139 @@
+/* Historia */
+.containerHeroHis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem 2rem 3rem 2rem;
+    background-color: #FDE4AF;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.contentHero h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #13373b;
+    padding: 1.2rem 0;
+}
+
+.contentHero p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Valores */
+.generalArq {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3rem 2rem;
+    background-color: #F1D28F;
+}
+
+.contenedores h2 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: #13373b;
+    padding: 1.2rem;
+    background-color: #fde4af;
+    border-radius: 0.6rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contenedores p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.contenedoresIMG {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedoresIMG img {
+
+    padding: 1rem;
+    width: 300px;
+    height: auto;
+    border-radius: 2rem;
+}
+
+/* Llamada a Acción */
+.containerButtom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    background-color: #FDE4AF;
+}
+
+.containerButtom h2{
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.containerButtom button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #e4572e;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.containerButtom button:hover {
+    background-color: #30646b;
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+    .containerHeroHis {
+        padding: 4rem 8rem;
+    }
+
+    .generalArq {
+        padding: 4rem 8rem;
+    }
+
+    .contenedores {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .containerHeroHis {
+        padding: 4rem 12rem;
+    }
+
+    .generalArq {
+        padding: 4rem 12rem;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+}
+
+@media screen and (min-width: 1920px) {
+    .containerHeroHis {
+        padding: 4rem 22rem;
+    }
+
+    .generalArq {
+        padding: 4rem 22rem;
+    }
+
+
+}

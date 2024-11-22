@@ -1,0 +1,139 @@
+/* General Styles for Contact Page */
+.ContainerGenContacto {
+    background-color: #F1D28F;
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    min-height: 80vh;
+}
+
+.cabecera {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.cabecera h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #13373b;
+    padding: 1.2rem 0;
+    background-color: #fde4af;
+    border-radius: .6rem;
+    margin: auto;
+    max-width: 80%;
+}
+
+.formYubi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 80%;
+}
+
+.ubicacion h3 {
+    text-align: center;
+    font-weight: bold;
+    color: #13373b;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ubicacion {
+    background-color: #fde4af;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.ubicacion p {
+    color: #30646b;
+    font-size: 1.1rem;
+}
+
+.contenedorredesflex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.redesSociales i {
+    font-size: 2.5rem;
+    color: #30646b;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.redesSociales:hover i {
+    transform: scale(1.2);
+    color: #e4572e;
+}
+
+.formulario {
+    background-color: #fde4af;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: #30646b;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #30646b;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.formulario button {
+    background-color: #e4572e;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #30646b;
+    transform: translateY(-3px);
+}
+
+.ubicacion img{
+    margin-top: 1rem;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: inset 5px 4px 1px #e4572e;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .formYubi {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecera h2 {
+        font-size: 1.8rem;
+    }
+
+    .ubicacion {
+        margin-bottom: 2rem;
+    }
+}

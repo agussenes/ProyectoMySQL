@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Juegos de madera</title>
+    <link rel="stylesheet" href="css/stylesPartials.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesContacto.css">
+    <script src="https://kit.fontawesome.com/961856c0dd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <%- include('partials/header') %>
+
+
+    <div class="ContainerGenContacto">
+        <div class="cabecera">
+            <h2>¡Estamos Aquí Para Ayudarte!</h2>
+        </div>
+        <div class="formYubi">
+            <div class="ubicacion">
+                <h3>Ubicación</h3>
+                <p>Mendiolaza, Córdoba, Argentina</p>
+                <div class="contenedorredesflex">
+                    <div class="facebook redesSociales"><a href="/"><i class="fab fa-facebook"></i></a></div>
+                    <div class="instagram redesSociales"><a href="/"><i class="fab fa-instagram"></i></a></div>
+                    <div class="whatsapp redesSociales"><a href="/"><i class="fab fa-whatsapp"></i></a></div>
+                </div>
+                <img src="/images/muebleCajonera.jpeg" alt="muebles">
+            </div>
+            <div class="formulario">
+                <form action="/contacto" method="POST">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer') %>
+
+            
+    <script src="/js/scriptNavbar.js"></script>
+</body>
+
+</html>
