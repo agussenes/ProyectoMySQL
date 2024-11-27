@@ -1,0 +1,129 @@
+/* Geral */
+
+body {
+    background-color: #F1D28F;
+
+}
+
+.catalog-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #FDE4AF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 7.5rem;
+}
+
+.catalog-title {
+    text-align: center;
+    color: #13373b;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.catalog-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-view-cart {
+    background-color: #497D56;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-view-cart:hover {
+    background-color: #e4572e;
+    transform: translateY(-3px);
+}
+
+/* Grid de Produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: 3rem;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: #DFEBEB;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 100%;
+    max-width: 24rem; 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 1.5rem;
+    color: #497D56;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.product-desc {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #497D56;
+    margin-bottom: 1rem;
+}
+
+.product-actions form {
+    margin-top: 1rem;
+}
+
+.product-actions button {
+    background-color: #497D56;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 0.5rem;
+}
+
+.product-actions button:hover {
+    background-color: #e4572e;
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (min-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

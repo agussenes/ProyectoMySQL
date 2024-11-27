@@ -27,4 +27,6 @@ const Usuario = sequelize.define('Usuario', {
     timestamps: false // Desactivar createdAt y updatedAt si no son necesarios
 });
 
+
+
 module.exports = Usuario;

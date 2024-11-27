@@ -6,18 +6,25 @@
     background: #FDE4AF;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
 body {
     background-color: #F1D28F;
+
 }
 
-.body-title {
+.body-title 
+
+{
     text-align: center;
     color: #497D56;
     margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: bold;
+
+
+
 }
 
 .contenedorBotonCrear {

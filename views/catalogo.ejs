@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="css/stylesPartials.css">
+    <link rel="stylesheet" href="css/stylesCatalogo.css">
+    <script src="https://kit.fontawesome.com/961856c0dd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <div class="catalog-container">
+        <h1 class="catalog-title">Catálogo de Productos</h1>
+        <div class="product-grid">
+            <% productos.forEach(function(producto) { %>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/images/<%= producto.imagen || 'placeholder.jpg' %>" alt="<%= producto.nombre %>">
+
+                    </div>
+                    <h2 class="product-title"><%= producto.nombre %></h2>
+                    <p class="product-desc"><%= producto.descripcion || 'Descripcion no disponible' %></p>
+                    <p class="product-price"><strong>Precio:</strong> $<%= producto.precio %></p>
+                    <div class="product-actions">
+                        <!-- Botão de agregar ao carrinho -->
+ <!-- Formulário para adicionar o produto ao carrinho -->
+<form action="/carrito/add" method="POST">
+    <input type="hidden" name="producto_id" value="<%= producto.producto_id %>">
+    <input type="hidden" name="precio" value="<%= producto.precio %>">
+    <input type="hidden" name="nombre" value="<%= producto.nombre %>">
+    <input type="hidden" name="imagen" value="<%= producto.imagen %>">
+    <button type="submit" class="btn-add-to-cart">Agregar al Carrito</button>
+</form>
+
+
+                        
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        <div class="catalog-footer">
+            <a href="/carrito" class="btn-view-cart">Ir al carrito</a>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+    <script src="/js/scriptNavbar.js"></script>
+</body>
+
+</html>

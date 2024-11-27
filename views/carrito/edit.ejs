@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto <%=producto.nombre%></title>
+    <link rel="stylesheet" href="/css/stylesPartials.css">
+    <link rel="stylesheet" href="/css/stylesEdit.css">
+    <script src="https://kit.fontawesome.com/961856c0dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <div class="contenedorGeneralEdit">
+        <h1 class="tituloEditarProducto">Editar Producto: <%=producto.nombre%></h1>
+        <form class="formEditarProducto" action="/productos/<%= producto.producto_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="campoForm">
+                <label for="nombre" class="labelEditarProducto">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" class="inputEditarProducto" value="<%= producto.nombre %>" required>
+            </div>
+            <div class="campoForm">
+                <label for="descripcion" class="labelEditarProducto">Descripción:</label>
+                <textarea name="descripcion" id="descripcion" class="textareaEditarProducto" required><%= producto.descripcion %></textarea>
+            </div>
+            <div class="campoForm">
+                <label for="precio" class="labelEditarProducto">Precio:</label>
+                <input type="number" name="precio" id="precio" class="inputEditarProducto" value="<%= producto.precio %>" required>
+            </div>
+            <div class="campoForm">
+                <label for="imagen" class="labelEditarProducto">Imagen:</label>
+                <input type="file" name="imagen" id="imagen" class="inputFileEditarProducto">
+                <p class="imagenActual">Imagen Actual:</p>
+                <img class="imagenVista" src="/images/<%= producto.imagen %>" alt="<%= producto.nombre %>">
+            </div>
+            <div class="campoForm">
+                <label for="categoria_id" class="labelEditarProducto">Categoría:</label>
+                <select name="categoria_id" id="categoria_id" class="selectEditarProducto">
+                    <% categorias.forEach(function(categoria) { %>
+                        <option value="<%= categoria.categoria_id %>" <%= producto.categoria_id === categoria.categoria_id ? 'selected' : '' %>>
+                            <%= categoria.nombre %>
+                        </option>
+                    <% }); %>
+                </select>
+            </div>
+            <button type="submit" class="btnEditarProducto">Actualizar Producto</button>
+        </form>
+        <a href="/" class="linkVolverInicio">Volver a inicio</a>
+    </div>
+
+   
+
+    <%- include('../partials/footer') %>
+
+
+    <script src="/js/scriptNavbar.js"></script>
+</body>
+
+</html>

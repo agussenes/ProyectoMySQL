@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Compra</title>
+    <link rel="stylesheet" href="/css/stylesPartials.css">
+    <link rel="stylesheet" href="/css/stylesCompra.css">    
+    <script src="https://kit.fontawesome.com/961856c0dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <%- include('../partials/header') %>
+    
+    
+
+    <div class="product-container">
+        <% if (Array.isArray(productos)) { %>
+            <h1>Confirmar Compra</h1>
+            <% let totalCompra = 0; %>
+            <% productos.forEach(producto => { %>
+                <div class="product-card">
+                    <!-- Imagem do produto -->
+                    <img src="/images/<%= producto.imagen %>" alt="<%= producto.nombre %>">
+                    
+                    <!-- Detalhes do produto -->
+                    <div class="product-details">
+                        <p><strong><%= producto.nombre %></strong></p>
+                        <p>Precio: R$ <%= (Number(producto.precio) || 0).toFixed(2) %></p>
+                        <p>Cantidad: <%= producto.cantidad %></p>
+                        <p>Total: <%= (Number(producto.precio) * producto.cantidad || 0).toFixed(2) %></p>
+                    </div>
+                </div>
+                <% totalCompra += producto.precio * producto.cantidad; %>
+            <% }) %>
+
+            <!-- Valor total da compra -->
+            <div class="total-price">
+                <p><strong>Valor Total: R$ <%= totalCompra.toFixed(2) %></strong></p>
+            </div>
+        <% } %>
+
+        <!-- Botão Finalizar Compra -->
+        <form action="/compra-finalizada" method="POST">
+            <button type="submit" class="checkout-btn">Finalizar Compra</button>
+        </form>
+
+    
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const finalizarCompraBtn = document.querySelector('.checkout-btn');
+            
+            // Quando o botão for clicado
+            finalizarCompraBtn.addEventListener('click', function(event) {
+                // Exibir o prompt
+                const confirmacao = confirm('Felicitaciones, adquiriste productos Cururu!');
+                
+                // Se o usuário clicar em 'OK', o formulário será enviado
+                if (confirmacao) {
+                    // O formulário será enviado
+                    event.target.closest('form').submit();
+                } else {
+                    // Caso o usuário cancele, o envio do formulário será impedido
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

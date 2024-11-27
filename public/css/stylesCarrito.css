@@ -1,0 +1,200 @@
+/* Geral */
+body {
+    background-color: #F1D28F;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container do Carrinho */
+#cart-container {
+    max-width: 1600px;  
+    min-width:1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #FDE4AF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 7.5rem;
+    min-height: 600px;  
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Título do Carrinho */
+.cart-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #13373b;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* Container do Carrinho (Itens e Resumo) */
+.cart-items-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+/* Coluna dos itens do carrinho */
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 65%; 
+    min-height: 400px; 
+ 
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #FDE4AF;
+}
+
+/* Mensagem de carrinho vazio */
+.empty-cart {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    width: 100%;
+}
+
+/* Cada card do carrinho */
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #DFEBEB;
+    padding: 1.5rem;
+    width: 42%;  
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: scale(1.05);  
+}
+
+.cart-item-image {
+    width: 100%;  
+    max-width: 200px;  
+    height: 200px;  
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.cart-item-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Ações: Comprar e Eliminar */
+.cart-item-actions .btn-action {
+    background-color: #497D56;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cart-item-actions .btn-action:hover {
+    background-color: #e4572e;
+}
+
+.remove-btn {
+    background-color: #E4572E;
+}
+
+.remove-btn:hover {
+    background-color: #C23E21;
+}
+
+/* Coluna do Total e Compra */
+.cart-summary {
+    width: 18%;  
+    padding: 2rem;
+    background-color: #DFEBEB;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Botões de Compra */
+.cart-summary p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #497D56;
+}
+
+.checkout-btn {
+    background-color: green;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: darkgreen;
+}
+
+/* Botão de Seguir Comprando */
+.continue-shopping-btn {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    color: #30646b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.continue-shopping-btn:hover {
+    color: #e4572e;
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #cart-container {
+        flex-direction: column;
+    }
+
+    .cart-items-container {
+        flex-direction: column;
+    }
+
+    .cart-items {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .cart-summary {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .cart-item {
+        width: 100%; 
+    }
+}

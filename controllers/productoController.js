@@ -1,6 +1,7 @@
-const { Producto, Categoria, Usuario } = require('../models');
+const { Carrito, Producto, Categoria, Usuario } = require('../models');
 
 const productoController = {
+
     list: async (req, res) => {
         try {
             const productos = await Producto.findAll({
@@ -16,15 +17,15 @@ const productoController = {
             res.status(500).send({ message: 'Error al obtener los productos' });
         }
     },
-
-    create: async (req, res) => {
-        try {
-            const categorias = await Categoria.findAll()
-            res.render('productos/create', { categorias });
-        } catch {
-            res.status(500).send({ message: 'Error al crear los productos' });
-        }
-    },
+    
+        create: async (req, res) => {
+            try {
+                const categorias = await Categoria.findAll()
+                res.render('productos/create', { categorias });
+            } catch {
+                res.status(500).send({ message: 'Error al crear los productos' });
+            }
+        },
 
     store: async (req, res) => {
         const { nombre, descripcion, precio, categoria_id } = req.body;
@@ -80,7 +81,7 @@ const productoController = {
             producto.imagen = imagen;
             await producto.save();
     
-            res.redirect('/productos');
+            res.redirect('/catalogo');
         } catch (error) {
             console.error('Error al actualizar producto:', error);
             res.status(500).send({ message: 'Error al actualizar los productos' });
@@ -98,9 +99,6 @@ const productoController = {
         }
     }
     
-
-
-
-}
+};
 
 module.exports = productoController;

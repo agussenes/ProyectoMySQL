@@ -1,5 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
+const Usuario = require('./Usuario');
+const Categoria = require('./Categoria');
+
 
 const Producto = sequelize.define('Producto', {
     producto_id: { // Define la clave primaria como producto_id
@@ -40,8 +43,8 @@ const Producto = sequelize.define('Producto', {
     timestamps: false
 });
 
-Producto.belongsTo(require('./Categoria'), { foreignKey: 'categoria_id', as: 'Categoria' });
+Producto.belongsTo(Categoria, { foreignKey: 'categoria_id', as: 'Categoria' });  // Associação para Categoria
+Producto.belongsTo(Usuario, { foreignKey: 'usuario_id', as: 'Usuario' });  // Associação para Usuario
 
-Producto.belongsTo(require('./Usuario'), { foreignKey: 'usuario_id', as: 'Usuario' });
 
 module.exports = Producto;
